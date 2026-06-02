@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+content_data/
+style_data/
+experiment/
+vgg_normalised.pth
