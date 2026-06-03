@@ -4,6 +4,7 @@ from PIL import Image
 from torchvision import transforms
 
 
+
 class ImageFolderDataset(Dataset):
     def __init__(self, root, transform = None):
         super(ImageFolderDataset, self).__init__()

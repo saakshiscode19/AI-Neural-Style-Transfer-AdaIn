@@ -5,20 +5,7 @@ import torch.optim as optim
 from pathlib import Path
 from utils.utils import *
 from utils.models import *
-try:
-    from tqdm import tqdm
-except ImportError:
-    class _TqdmFallback:
-        def __init__(self, iterable, total=None, desc=None):
-            if desc:
-                print(desc)
-            self.iterable = iterable
-        def __iter__(self):
-            return iter(self.iterable)
-        def __len__(self):
-            return len(self.iterable)
-    tqdm = _TqdmFallback
-    tqdm.write = print
+from tqdm import tqdm
 from torchvision.utils import save_image
 
 
@@ -192,7 +179,7 @@ def main():
             with torch.no_grad():
                 output = torch.cat([content_batch, style_batch, g], dim=0)
                 save_image(output, save_dir / f'output_{epoch+1}.png', nrow=args.batch_size)
-
+ 
 
 
 
