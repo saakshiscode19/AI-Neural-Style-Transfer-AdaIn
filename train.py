@@ -48,7 +48,7 @@ def parse_arguments():
     parser.add_argument('--log_interval', type=int, default=1,
                         help='Log interval')
     
-    parser.add_argument('--save_interval', type=int, default=2,
+    parser.add_argument('--save_interval', type=int, default=1,
                         help='Save interval')
     
     parser.add_argument('--resume', action='store_true', default=False,
