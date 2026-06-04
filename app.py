@@ -36,7 +36,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 encoder = VGGEncoder('vgg_normalised.pth').to(device)
 decoder = Decoder().to(device)
-decoder.load_state_dict(torch.load('/Users/apple/Desktop/NST_code/experiment/big_dataset/decoder_2.pth'))
+decoder.load_state_dict(torch.load('/Users/apple/Desktop/NST_code/experiment/big_dataset/decoder_4.pth'))
 
 encoder.eval()
 decoder.eval()
